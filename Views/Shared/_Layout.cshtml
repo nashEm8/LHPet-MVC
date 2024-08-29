@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LHPet</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LHPet.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-secondary bg-gradient d-flex justify-content-between" style="padding: 20px 250px;">
+  <div class="d-flex align-items-center">
+    <img src="~/logo.png" width="70px" alt="Logo da LHPet">
+    <h2 style="margin: 5px 0 0 10px;">LHPet</h2>
+  </div>
+
+   <div class="d-flex align-items-center">
+     <ul class="d-flex gap-4 menu" style="list-style: none;">
+        <a href="#">
+            <li>Inicio</li>
+        </a>
+        <a href="#">
+            <li>Sistema</li>
+        </a>
+        <a href="#">
+            <li style="background-color: #BE0000; padding: 5px 20px; color: #fff; border-radius: 5px;">Sair</li>
+        </a>
+     </ul>
+   </div>
+
+</nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted" style="background-color: #000;">
+        <div class="container" class="text-center" style="text-align: center; color: #fff;">
+            &copy; 2024 - LHPet - Desenvolvido com ❤️​ por <a href="https://eacode.netlify.app/" style="color: #FF00D4; text-decoration: none;">Emanuel Azevedo</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
